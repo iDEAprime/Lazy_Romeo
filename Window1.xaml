@@ -1,0 +1,48 @@
+﻿<Window x:Name="ProfileDetails" x:Class="Lazy_Romeo.ProfileDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lazy_Romeo"
+        mc:Ignorable="d"
+        Title="Profile Details" Height="350" Width="300" HorizontalAlignment="Center" ResizeMode="NoResize">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFD9265A" Offset="0"/>
+            <GradientStop Color="#FF621E76" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF3A0066" Offset="0"/>
+                <GradientStop Color="#FFB90000" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="ConfirmButton" Content="Confim profile" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="135" Height="40" Margin="79,0,79.6,18.8" FontFamily="MV Boli" FontSize="16" Click="Button_Click" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB90000" Offset="0"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <ComboBox x:Name="ProfileComboBox" HorizontalAlignment="Left" Height="30" Margin="35,16,0,0" VerticalAlignment="Top" Width="223" SelectionChanged="ProfileComboBox_SelectionChanged" FontFamily="MV Boli" FontSize="16"/>
+        <PasswordBox x:Name="ProfilePasswordBox" HorizontalAlignment="Left" Margin="35,60,0,0" VerticalAlignment="Top" Width="224" Height="30" FontFamily="MV Boli" FontSize="16" BorderThickness="1" Background="#FFE5E5E5"/>
+        <TextBlock x:Name="LnameTextBlock" HorizontalAlignment="Left" Margin="20,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="255" Foreground="White" Text="Last name: " FontFamily="MV Boli" FontSize="14"/>
+        <TextBlock x:Name="FnameTextBlock" HorizontalAlignment="Left" Margin="20,210,0,0" TextWrapping="Wrap" Text="First name: " VerticalAlignment="Top" Height="25" Width="255" Foreground="White" FontFamily="MV Boli" FontSize="14"/>
+        <Button x:Name="OpenProfileOKButton" Content="OK" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="135" Height="40" Margin="79,0,79.6,165.8" FontFamily="MV Boli" FontSize="16" Click="OpenProfileOKButton_Click" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB90000" Offset="0"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="WrongProfileTextBox" HorizontalAlignment="Left" Height="20" Margin="35,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Background="{x:Null}" SelectionBrush="{x:Null}" BorderThickness="0" FontFamily="Consolas" Foreground="#FF0E0000"/>
+
+    </Grid>
+</Window>
